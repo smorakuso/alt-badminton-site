@@ -3,40 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ALT Badminton - La Teste</title>
-  <style>
-    :root{--blue:#0b5bd7;--yellow:#ffd400}
-    body{font-family:Arial,Helvetica,sans-serif;margin:0;color:#222}
-    header{background:linear-gradient(90deg,var(--blue),#0b73ff);color:white;padding:24px}
-    .brand{display:flex;align-items:center;gap:16px}
-    .brand img{height:64px}
-    main{padding:24px}
-    .cta{background:var(--yellow);color:#002;display:inline-block;padding:10px 16px;border-radius:6px;text-decoration:none}
-    footer{background:#f4f6fb;padding:12px;text-align:center}
-  </style>
+  <title>ALT Badminton</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <img src="assets/logo.png" alt="ALT Badminton logo" onerror="this.style.display='none'">
-      <div>
-        <h1>ALT Badminton</h1>
-        <div>Club de La Teste‑de‑Buch</div>
-      </div>
+  <header class="site-header">
+    <div class="container">
+      <img src="assets/logo.png" alt="ALT Badminton" class="logo">
+      <nav class="nav">
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#events">Horaires</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
     </div>
   </header>
+
   <main>
-    <h2>Bienvenue au club ALT Badminton</h2>
-    <p>Nous proposons des entraînements pour tous niveaux, des compétitions et des événements conviviaux.</p>
-    <h3>Horaires</h3>
-    <ul>
-      <li>Mardi 19:00–21:00 — Adultes</li>
-      <li>Jeudi 18:00–20:00 — Jeunes</li>
-    </ul>
-    <p><a class="cta" href="mailto:contact@alt-badminton-la-teste.org">Contactez‑nous</a></p>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>ALT Badminton</h1>
+          <p>Club de La Teste — Rejoignez-nous pour jouer, progresser et partager la passion du volant.</p>
+          <p class="cta-row"><a href="#contact" class="cta">Nous rejoindre</a><a href="#events" class="cta ghost">Voir les horaires</a></p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="shuttle"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="panel">
+      <div class="container">
+        <h2>À propos</h2>
+        <p>ALT Badminton rassemble des joueurs de tous niveaux. Entraînements, tournois et convivialité — tout pour s'améliorer et s'amuser.</p>
+      </div>
+    </section>
+
+    <section id="events" class="panel alt">
+      <div class="container">
+        <h2>Horaires</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Lundi</h3>
+            <p>20:00 — 22:00</p>
+          </div>
+          <div class="card">
+            <h3>Mercredi</h3>
+            <p>19:00 — 21:30</p>
+          </div>
+          <div class="card">
+            <h3>Samedi</h3>
+            <p>10:00 — 12:00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="panel">
+      <div class="container">
+        <h2>Galerie</h2>
+        <div class="gallery">
+          <div class="thumb" style="background-image:url('assets/placeholder1.jpg')"></div>
+          <div class="thumb" style="background-image:url('assets/placeholder2.jpg')"></div>
+          <div class="thumb" style="background-image:url('assets/placeholder3.jpg')"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel contact-panel">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Questions ? Écris-nous : <a href="mailto:contact@alt-badminton.fr">contact@alt-badminton.fr</a></p>
+        <form class="contact-form" action="mailto:contact@alt-badminton.fr" method="post" enctype="text/plain">
+          <input name="name" placeholder="Ton nom" required>
+          <input name="email" type="email" placeholder="Ton email" required>
+          <textarea name="message" placeholder="Ton message" required></textarea>
+          <button type="submit" class="btn">Envoyer</button>
+        </form>
+      </div>
+    </section>
   </main>
-  <footer>
-    © ALT Badminton — La Teste‑de‑Buch
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© ALT Badminton — La Teste</p>
+    </div>
   </footer>
+
+  <script src="js/scripts.js"></script>
 </body>
 </html>
