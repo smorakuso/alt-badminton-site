@@ -1,0 +1,43 @@
+:root{
+  --blue:#0b63d8; --yellow:#ffd400; --bg:#0f1720; --muted:#94a3b8; --card:#0b1220;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:linear-gradient(180deg,#071022 0%,#071829 100%);}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.site-header{backdrop-filter:blur(6px);position:sticky;top:0;z-index:30;background:linear-gradient(180deg,rgba(7,16,34,0.6),rgba(7,16,34,0.35));border-bottom:1px solid rgba(255,255,255,0.03)}
+.site-header .container{display:flex;align-items:center;gap:20px}
+.logo{height:48px}
+.nav{margin-left:auto;display:flex;gap:18px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:6px}
+.nav a.btn{background:var(--yellow);color:#072034;padding:8px 12px}
+.nav-toggle{display:none;background:none;border:0;color:var(--yellow);font-size:22px}
+.hero{padding:80px 0}
+.hero-inner{display:flex;align-items:center;gap:40px}
+.hero-text h1{font-size:44px;margin:0;color:var(--yellow);text-shadow:0 6px 20px rgba(11,99,216,0.06)}
+.hero-text p{color:var(--muted);font-size:18px}
+.cta-row{margin-top:18px}
+.cta{display:inline-block;background:var(--yellow);color:#072034;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600;margin-right:10px}
+.cta.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.hero-art{flex:1;display:flex;justify-content:center}
+.shuttle{width:160px;height:160px;border-radius:50%;background:conic-gradient(from 120deg,#fff2 0,#fff1 30%,var(--blue) 60%);box-shadow:0 10px 30px rgba(11,99,216,0.18);position:relative;animation:float 4s ease-in-out infinite}
+.shuttle::after{content:'';position:absolute;right:-10px;top:50%;width:90px;height:6px;background:linear-gradient(90deg,#fff0,#fff2);transform:translateY(-50%) rotate(-10deg);border-radius:6px;opacity:.7}
+@keyframes float{0%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-14px) rotate(6deg)}100%{transform:translateY(0) rotate(-6deg)}}
+.panel{padding:60px 0}
+.panel.alt{background:linear-gradient(180deg,rgba(11,99,216,0.04),transparent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.card{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.gallery{display:flex;gap:12px}
+.thumb{flex:1;height:160px;background-size:cover;background-position:center;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.6);transition:transform .28s ease}
+.thumb:hover{transform:scale(1.04)}
+.contact-form{display:grid;gap:10px;max-width:520px}
+.contact-form input,.contact-form textarea{padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:#e6eef8}
+.site-footer{padding:24px 0;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,0.02)}
+@media(max-width:820px){.hero-inner{flex-direction:column;text-align:center}.nav{display:none}.nav-toggle{display:block;margin-left:auto}}
+
+/* subtle entrance animations */
+.hero-text, .card, .thumb, .panel h2{opacity:0;transform:translateY(12px);animation:enter .8s ease forwards}
+.hero-text{animation-delay:.2s}
+.panel h2{animation-delay:.1s}
+.card{animation-delay:.25s}
+.thumb{animation-delay:.3s}
+@keyframes enter{to{opacity:1;transform:none}}
