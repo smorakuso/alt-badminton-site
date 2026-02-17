@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>ALT Badminton</title>
+  <title>ALT Badminton — Sport Moderne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -25,12 +28,23 @@
     <section id="home" class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <h1>ALT Badminton</h1>
-          <p>Club de La Teste — Rejoignez-nous pour jouer, progresser et partager la passion du volant.</p>
+          <h1 class="split">ALT<br>Badminton</h1>
+          <p class="lead">Club de La Teste — Rejoignez-nous pour jouer, progresser et partager la passion du volant.</p>
           <p class="cta-row"><a href="#contact" class="cta">Nous rejoindre</a><a href="#events" class="cta ghost">Voir les horaires</a></p>
         </div>
         <div class="hero-art" aria-hidden="true">
-          <div class="shuttle"></div>
+          <svg class="shuttle-svg" viewBox="0 0 200 200" width="220" height="220" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0%" stop-color="#fff" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#0b63d8" stop-opacity="1"/>
+              </linearGradient>
+            </defs>
+            <g transform="translate(100,100)">
+              <circle cx="0" cy="0" r="48" fill="url(#g1)" class="shuttle-core" />
+              <path d="M-30,-10 C-10,-30 30,-30 50,-10" stroke="#ffd400" stroke-width="6" fill="none" class="traj" />
+            </g>
+          </svg>
         </div>
       </div>
     </section>
